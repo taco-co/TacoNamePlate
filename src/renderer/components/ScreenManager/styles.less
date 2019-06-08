@@ -1,0 +1,31 @@
+
+.screen-manager {
+    .please-wait {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #161616;
+        z-index: 1000;
+
+        opacity: 0.0;
+        visibility: hidden;
+        transition: opacity ease-out 250ms,
+                    visibility ease-out 250ms;
+        
+        &.show {
+            opacity: 1.0;
+            visibility: visible;
+        }
+
+        .please-wait-inner {
+            position: relative;
+            top: 50vh;
+            height: 2em;
+            line-height: 2em;
+            transform: translateY(-2em);
+            text-align: center;
+        }
+    }
+}
